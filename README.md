@@ -1,0 +1,2 @@
+# Student_Performance_Model
+ML model that predicts a student's performance index with taking multiple inputs
