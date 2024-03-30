@@ -1,9 +1,12 @@
 import numpy as np
 from flask import Flask, request, render_template
+import pickle  # Import pickle module here
 
 app = Flask(__name__)
 
-model = pickle.load(open("model.pkl", "rb"))
+# Load the model outside of the route function
+with open("model.pkl", "rb") as f:
+    model = pickle.load(f)
 
 @app.route("/")
 def home():
